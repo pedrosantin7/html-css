@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1> <!--PDF 11-->
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture> <!--Colocar a primeira imagem sempre a imagem que será a principal e acima dela as outras-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"><!--Coloca 50px a mais do que o tamanho da imagem-->
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <audio preload="metadata" controls loop><!--preload carregar o arquivo ou não, evitar auto e none-->
+        <source src="midia/sugar-high.mp3" type="audio/mpeg">
+        <source src="midia/sugar-high.ogg" type="audio/ogg">
+        <source src="midia/sugar-high.wav" type="audio/wav"><!--Evitar wav por conta do tamanho do arquivo-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/sugar-high.mp3" download="midia/sugar-high.mp3">Clique aqui</a> para baixar o arquivo.</p>
+    </audio>
+   <br>
+    <!--Abaixo modo alternativo para inserir áudio-->
+    <audio src="midia/happy-mistake.mp3" controls></audio><!--Evitar colocar 'autoplay' por motivos óbvios--> <!--Formatos de áudio MP3 WAV OGG-->
+</body>
+</html>
